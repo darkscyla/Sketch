@@ -6,8 +6,8 @@ Point2D::Point2D()
 	y_ = 600;
 }
 
-Point2D::Point2D(int a, int b)
+Point2D::Point2D(int x, int y)
 {
-	x_ = a;
-	y_ = b;
+	x_ = x;
+	y_ = y;
 }
