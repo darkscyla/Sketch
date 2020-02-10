@@ -1,4 +1,13 @@
 #include "Point2D.h"
 
-// TODO 2:
-//		Implement the functions defined in Point.h
+Point2D::Point2D()
+{
+	x_ = 800;
+	y_ = 600;
+}
+
+Point2D::Point2D(int x, int y)
+{
+	x_ = x;
+	y_ = y;
+}

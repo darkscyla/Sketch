@@ -1,13 +1,10 @@
 #include <SFML/Graphics.hpp>
+#include<Point2D.h>
 
 int main()
 {
-    // TODO 3:
-    // 1. Include the Point2D.h file and create a Point2D object
-    // 2. Set the x & y values using the constructor
-    // 3. Replace the 800, 600 by the points x & y members
-
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+    Point2D PointObject(1920,1080);
+    sf::RenderWindow window(sf::VideoMode(PointObject.x_,PointObject.y_), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
