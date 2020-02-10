@@ -14,8 +14,8 @@ Polygon<size>::Polygon(std::array<sf::Vector2f, size> _vertices)
 	shape_.setOutlineThickness(5);
 }
 
-template<size_t size>
 // Implicit conversion
+template<size_t size>
 Polygon<size>::operator sf::ConvexShape()
 {
 	return shape_;

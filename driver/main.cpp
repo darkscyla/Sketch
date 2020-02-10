@@ -13,8 +13,13 @@ int main()
         {300, 300}, 
         {700, 300},
         {900, 700},
-        {500, 700}
+        {500, 800}
         } });
+
+    // TODO 3:
+    //      Create a triangle object and set its coordinates as above.
+    //      This works because of initializers list. Also, visualize it
+    //      similar to quad object. Try both the approaches 
 
     while (window.isOpen())
     {
@@ -27,7 +32,11 @@ int main()
 
         window.clear();
         
-        // NOTE: Either this (works because of implicit conversion defined in class)
+        // NOTE: Either this (works because of implicit conversion defined in polygon class
+        //                    Suppose a function takes a double as an argument. The type of,
+        //                    say, Point2D is of course different. Using implicit conversion,
+        //                    you can define how a certain object should be converted into another.
+        //                    In this case, a conversion to sf::ConvexShape is defined (take a look)
         // window.draw(quad);
 
         // Or this

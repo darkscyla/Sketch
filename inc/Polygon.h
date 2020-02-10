@@ -9,7 +9,7 @@ namespace geometry {
 template< size_t size>
 class Polygon
 {
-	static_assert(size > 2, "Polynomial size must be grater than 2");
+	static_assert(size > 2, "Polygon size must be greater than 2");
 protected:
 	sf::ConvexShape shape_;
 public:
