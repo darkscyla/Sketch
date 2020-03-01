@@ -1,5 +1,6 @@
 #include"Point2D.h"
 #include "Quad.h"
+#include "Triangle.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -8,7 +9,6 @@ int main()
     Point2D PointObject(1920,1080);
     sf::RenderWindow window(sf::VideoMode(PointObject.x_,PointObject.y_), "SFML works!");
  
-    // NOTE: As the class is now in namespace geometry, it must be appended to resolve it
     geometry::Quad quad({ { 
         {300, 300}, 
         {700, 300},
@@ -16,10 +16,11 @@ int main()
         {500, 800}
         } });
 
-    // TODO 3:
-    //      Create a triangle object and set its coordinates as above.
-    //      This works because of initializers list. Also, visualize it
-    //      similar to quad object. Try both the approaches 
+    geometry::Triangle triangle({ {
+        {1200,600},
+        {500,600},
+        {850,300}
+        } });
 
     while (window.isOpen())
     {
@@ -32,15 +33,8 @@ int main()
 
         window.clear();
         
-        // NOTE: Either this (works because of implicit conversion defined in polygon class
-        //                    Suppose a function takes a double as an argument. The type of,
-        //                    say, Point2D is of course different. Using implicit conversion,
-        //                    you can define how a certain object should be converted into another.
-        //                    In this case, a conversion to sf::ConvexShape is defined (take a look)
-        // window.draw(quad);
-
-        // Or this
         quad.render(&window);
+        triangle.render(&window);
 
         window.display();
     }

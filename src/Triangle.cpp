@@ -2,9 +2,10 @@
 
 namespace geometry {
 
-//	TODO 2:
-//		Implement the class functions here. Once again, you might
-//		want to take a look at the Quad class. Changes the visual
-//		appearance as desired
-
-} // namespace geometry
+	Triangle::Triangle(std::array<sf::Vector2f, 3> _vertices) : Polygon(_vertices)
+	{
+		shape_.setFillColor(sf::Color::Blue);
+		shape_.setOutlineColor(sf::Color::White);
+		shape_.setOutlineThickness(5);
+	}
+}

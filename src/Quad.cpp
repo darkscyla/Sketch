@@ -10,4 +10,4 @@ Quad::Quad(std::array<sf::Vector2f, 4> _vertices) :
 	shape_.setOutlineThickness(5);
 }
 
-}	// namespace geometry
+}

@@ -19,6 +19,6 @@ public:
 	void render(sf::RenderWindow* _window);
 };
 
-} // namespace geometry
+}
 
 #include "Polygon_impl.h"
